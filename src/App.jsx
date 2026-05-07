@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Preview from './components/Preview';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [currentTemplate, setCurrentTemplate] = useState('casino');
