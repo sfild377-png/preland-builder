@@ -1,0 +1,21 @@
+@import "tailwindcss";
+/* Адаптивность для конструктора */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column !important;
+  }
+  .sidebar-panel {
+    width: 100% !important;
+    height: 50vh;
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .preview-area {
+    padding: 1rem !important;
+    height: 50vh;
+  }
+  /* Уменьшаем телефон на мобильных */
+  .preview-area > div {
+    transform: scale(0.8);
+  }
+}
