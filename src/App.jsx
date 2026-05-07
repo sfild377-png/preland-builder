@@ -188,7 +188,10 @@ function App() {
             </div>
 
             <a href="${activeData.offerUrl}" class="btn">${activeData.buttonText}</a>
-            <div class="footer">${activeData.footerText}</div>
+            <div class="footer">
+    ${activeData.footerText} <br> 
+    <span style="opacity: 0.5; font-size: 0.6rem;">Created with <a href="https://danil-preland.vercel.app" target="_blank" style="color: inherit; text-decoration: none;">Danil Builder</a></span>
+</div>
         </div>
     </div>
     <script src="script.js"></script>
