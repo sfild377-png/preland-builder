@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Preview from './components/Preview';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import ReactGA from "react-ga4";
 
 
 function App() {
@@ -104,6 +105,12 @@ function App() {
   const activeData = data[currentTemplate];
 
   const downloadZIP = async () => {
+    // Отправляем событие в GA4
+  ReactGA.event({
+    category: "User Action",
+    action: "Download ZIP",
+    label: currentTemplate, // Покажет, какой шаблон скачали (casino/betting/crypto)
+  });
     const zip = new JSZip();
     
     const cssContent = `
